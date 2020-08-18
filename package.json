@@ -1,0 +1,40 @@
+{
+  "name": "tennisreservation",
+  "version": "1.0.0",
+  "description": "Automated Tennis Reservation in Scarsdale",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dpkwhan/tennisreservation.git"
+  },
+  "author": "David Han",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base"
+    ],
+    "env": {
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --double-quote --write",
+      "git add"
+    ]
+  }
+}
